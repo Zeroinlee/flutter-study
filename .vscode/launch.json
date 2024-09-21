@@ -1,0 +1,148 @@
+{
+    // IntelliSense를 사용하여 가능한 특성에 대해 알아보세요.
+    // 기존 특성에 대한 설명을 보려면 가리킵니다.
+    // 자세한 내용을 보려면 https://go.microsoft.com/fwlink/?linkid=830387을(를) 방문하세요.
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "bloc_concurrency_sample",
+            "cwd": "bloc\\bloc_concurrency_sample",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "bloc_concurrency_sample (profile mode)",
+            "cwd": "bloc\\bloc_concurrency_sample",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "bloc_concurrency_sample (release mode)",
+            "cwd": "bloc\\bloc_concurrency_sample",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "bloc_example_user_list",
+            "cwd": "bloc\\bloc_example_user_list",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "bloc_example_user_list (profile mode)",
+            "cwd": "bloc\\bloc_example_user_list",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "bloc_example_user_list (release mode)",
+            "cwd": "bloc\\bloc_example_user_list",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "bloc_to_communication_sample",
+            "cwd": "bloc\\bloc_to_communication_sample",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "bloc_to_communication_sample (profile mode)",
+            "cwd": "bloc\\bloc_to_communication_sample",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "bloc_to_communication_sample (release mode)",
+            "cwd": "bloc\\bloc_to_communication_sample",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "count_state_manage_sample_bloc",
+            "cwd": "bloc\\count_state_manage_sample_bloc",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "count_state_manage_sample_bloc (profile mode)",
+            "cwd": "bloc\\count_state_manage_sample_bloc",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "count_state_manage_sample_bloc (release mode)",
+            "cwd": "bloc\\count_state_manage_sample_bloc",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "flutter_bloc_widget_sample",
+            "cwd": "bloc\\flutter_bloc_widget_sample",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "flutter_bloc_widget_sample (profile mode)",
+            "cwd": "bloc\\flutter_bloc_widget_sample",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "flutter_bloc_widget_sample (release mode)",
+            "cwd": "bloc\\flutter_bloc_widget_sample",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "movie_search_bloc_sample",
+            "cwd": "bloc\\movie_search_bloc_sample",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "movie_search_bloc_sample (profile mode)",
+            "cwd": "bloc\\movie_search_bloc_sample",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "movie_search_bloc_sample (release mode)",
+            "cwd": "bloc\\movie_search_bloc_sample",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "firebase_login",
+            "cwd": "firebase\\firebase_login",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "firebase_login (profile mode)",
+            "cwd": "firebase\\firebase_login",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "firebase_login (release mode)",
+            "cwd": "firebase\\firebase_login",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}

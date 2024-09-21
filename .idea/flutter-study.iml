@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/bloc/bloc_to_communication_sample/build" />
+      <excludeFolder url="file://$MODULE_DIR$/bloc/bloc_to_communication_sample/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/bloc/bloc_to_communication_sample/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/bloc/flutter_bloc_widget_sample/build" />
+      <excludeFolder url="file://$MODULE_DIR$/bloc/flutter_bloc_widget_sample/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/bloc/flutter_bloc_widget_sample/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/bloc/count_state_manage_sample_bloc/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/bloc/count_state_manage_sample_bloc/build" />
+      <excludeFolder url="file://$MODULE_DIR$/bloc/count_state_manage_sample_bloc/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/bloc/bloc_concurrency_sample/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/bloc/bloc_concurrency_sample/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/bloc/bloc_concurrency_sample/build" />
+      <excludeFolder url="file://$MODULE_DIR$/bloc/movie_search_bloc_sample/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/bloc/movie_search_bloc_sample/build" />
+      <excludeFolder url="file://$MODULE_DIR$/bloc/movie_search_bloc_sample/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/bloc/bloc_example_user_list/build" />
+      <excludeFolder url="file://$MODULE_DIR$/bloc/bloc_example_user_list/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/bloc/bloc_example_user_list/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/firebase/firebase_login/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/firebase/firebase_login/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/firebase/firebase_login/build" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

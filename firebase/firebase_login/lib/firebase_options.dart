@@ -52,7 +52,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyDYxSB2KesDsIwK_HlIHlaoPCeHihlRIn0',
-    appId: '1:981054163920:android:46600fb0976f4fa7fcc7d5',
+    appId: '1:981054163920:android:118e3c0560eff861fcc7d5',
     messagingSenderId: '981054163920',
     projectId: 'login-758de',
     storageBucket: 'login-758de.appspot.com',
@@ -64,6 +64,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '981054163920',
     projectId: 'login-758de',
     storageBucket: 'login-758de.appspot.com',
+    iosClientId: '981054163920-r8qj25hkh25mvbub5jqf1lps6orvonpb.apps.googleusercontent.com',
     iosBundleId: 'com.example.firebaseLogin',
   );
 
@@ -73,6 +74,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '981054163920',
     projectId: 'login-758de',
     storageBucket: 'login-758de.appspot.com',
+    iosClientId: '981054163920-r8qj25hkh25mvbub5jqf1lps6orvonpb.apps.googleusercontent.com',
     iosBundleId: 'com.example.firebaseLogin',
   );
 
@@ -85,4 +87,5 @@ class DefaultFirebaseOptions {
     storageBucket: 'login-758de.appspot.com',
     measurementId: 'G-RFWNEHT388',
   );
+
 }
