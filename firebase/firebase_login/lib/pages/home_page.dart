@@ -1,7 +1,7 @@
 import 'package:firebase_login/pages/anonymous_sign_in_page.dart';
 import 'package:firebase_login/pages/google_auth_page.dart';
 import 'package:firebase_login/pages/phone_auth_page.dart';
-import 'package:firebase_login/pages/rest_password_page';
+import 'package:firebase_login/pages/rest_password_page.dart';
 import 'package:firebase_login/pages/sign_out_page.dart';
 import 'package:firebase_login/pages/sign_up_page.dart';
 import 'package:flutter/material.dart';
@@ -64,6 +64,7 @@ class HomePage extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
+            // 여기부터 아직
             ElevatedButton(
                 onPressed: () {
                   Navigator.push(
