@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 
 class Palette {
   static const Color iconColor = Color(0xFFB6C7D1);
