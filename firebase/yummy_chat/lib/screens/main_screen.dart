@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:yummy_chat/config/palette.dart';
 import 'package:yummy_chat/screens/chat_screen.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class LoginSignupScreen extends StatefulWidget {
   const LoginSignupScreen({super.key});
@@ -453,6 +454,14 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
                                 password: userPassword,
                               );
 
+                              await FirebaseFirestore.instance
+                                  .collection('users')
+                                  .doc(newUser.user!.uid)
+                                  .set({
+                                'userName': userName,
+                                'email': userEmail,
+                              });
+
                               if (newUser.user != null) {
                                 Navigator.push(context, MaterialPageRoute(
                                   builder: (context) {
@@ -532,6 +541,9 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
                   left: 0,
                   child: Column(
                     children: [
+                      SizedBox(
+                        height: 20,
+                      ),
                       Text(
                           isSignupScreen ? 'or Signup with' : 'or Signin with'),
                       const SizedBox(
