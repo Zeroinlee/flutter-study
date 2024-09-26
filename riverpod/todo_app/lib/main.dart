@@ -61,14 +61,22 @@ class TodoProvider with ChangeNotifier {
 
   void addTodo(Todo todo) {
     // TODO: Implement the addTodo method
+    _todos.add(todo);
+    notifyListeners();
   }
 
   void updateTodo(String id, {String? title, bool? isCompleted}) {
     // TODO: Implement the updateTodo method
+    final todo = _todos.firstWhere((todo) => todo.id == id);
+    if (title != null) todo.title = title;
+    if (isCompleted != null) todo.isCompleted = isCompleted;
+    notifyListeners();
   }
 
   void deleteTodo(String id) {
     // TODO: Implement the deleteTodo method
+    _todos.removeWhere((todo) => todo.id == id);
+    notifyListeners();
   }
 }
 
@@ -100,6 +108,8 @@ class FilterProvider with ChangeNotifier {
 
   void setCategory(String category) {
     // TODO: Implement the setCategory method
+    _selectedCategory = category;
+    notifyListeners();
   }
 }
 
@@ -115,6 +125,7 @@ class FilterButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: () {
         // TODO: Set the category
+        filterProvider.setCategory(category);
       },
       style: ButtonStyle(
         backgroundColor: WidgetStateProperty.all(
@@ -152,10 +163,15 @@ class TodoList extends StatelessWidget {
             value: todo.isCompleted,
             onChanged: (value) {
               // TODO: Update the todo
+              todoProvider.updateTodo(
+                todo.id,
+                isCompleted: value,
+              );
             },
           ),
           onLongPress: () {
             // TODO: Delete the todo
+            todoProvider.deleteTodo(todo.id);
           },
         );
       },
@@ -234,6 +250,11 @@ class _AddTodoDialogState extends State<AddTodoDialog> {
           onPressed: () {
             if (_titleController.text.isNotEmpty) {
               // TODO: Add the todo
+              todoProvider.addTodo(Todo(
+                id: DateTime.now().toString(),
+                title: _titleController.text,
+                category: _category,
+              ));
               Navigator.of(context).pop();
             }
           },
