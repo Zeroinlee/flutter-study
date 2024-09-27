@@ -18,7 +18,8 @@ class MyApp extends StatelessWidget {
 
 final itemsProvider = FutureProvider<List<String>>((ref) async {
   // TODO: Return the asyncItems
-  return [];
+  await Future.delayed(Duration(seconds: 2));
+  return ['Apple', 'Banana', 'Cherry', 'Date', 'Elderberry', 'Fig', 'Grape'];
 });
 
 class AsyncDataScreen extends ConsumerWidget {

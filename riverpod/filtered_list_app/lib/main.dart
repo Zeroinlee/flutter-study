@@ -47,9 +47,9 @@ class FilteredListScreen extends ConsumerWidget {
   const FilteredListScreen({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) { 
+  Widget build(BuildContext context, WidgetRef ref) {
     // TODO: Implement the watch method
-    final filteredItems =
+    final filteredItems = ref.watch(filteredItemsProvider);
 
     return Scaffold(
       appBar: AppBar(title: const Text('목록 필터링')),
@@ -60,6 +60,7 @@ class FilteredListScreen extends ConsumerWidget {
             TextField(
               onChanged: (value) {
                 // TODO: Implement the read method
+                ref.read(filterProvider.notifier).state = value;
               },
               decoration: const InputDecoration(
                 labelText: '필터링 키워드 입력',
