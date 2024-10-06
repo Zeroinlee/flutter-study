@@ -1,7 +1,9 @@
-import 'package:dart_data_class_generator/pages/person_page.dart';
 import 'package:flutter/material.dart';
+import 'package:riverpod_freezed/models/mutable_person.dart';
+import 'package:riverpod_freezed/pages/mutable_person_page.dart';
 
-import 'pages/user_list_page.dart';
+import 'pages/collections_page.dart';
+import 'pages/person_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -43,10 +45,20 @@ class MyHomePage extends StatelessWidget {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const UserListPage(),
+                      builder: (context) => const MutablePersonPage(),
                     ));
               },
-              child: const Text('User List'),
+              child: const Text('Mutable Person'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const CollectionsPage(),
+                    ));
+              },
+              child: const Text('Collections'),
             ),
           ],
         ),
