@@ -1,15 +1,31 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+// import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-final familyHelloProvider = Provider.family<String, String>(
-  (ref, name) {
-    print('[familyHelloProvider($name)] created');
+part 'family_provider.g.dart';
 
-    ref.onDispose(
-      () {
-        print('[familyHelloProvider($name)] disposed');
-      },
-    );
+// final familyHelloProvider = Provider.family<String, String>(
+//   (ref, name) {
+//     print('[familyHelloProvider($name)] created');
 
-    return 'Hello $name';
-  },
-);
+//     ref.onDispose(
+//       () {
+//         print('[familyHelloProvider($name)] disposed');
+//       },
+//     );
+
+//     return 'Hello $name';
+//   },
+// );
+
+@Riverpod(keepAlive: true)
+String familyHello(FamilyHelloRef ref, String there) {
+  print('[familyHelloProvider($there)] created');
+
+  ref.onDispose(
+    () {
+      print('[familyHelloProvider($there)] disposed');
+    },
+  );
+
+  return 'Hello $there';
+}
