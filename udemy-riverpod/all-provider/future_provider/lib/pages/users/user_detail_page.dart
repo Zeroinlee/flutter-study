@@ -19,14 +19,18 @@ class UserDetailPage extends ConsumerWidget {
         ),
         body: userDetail.when(
           data: (data) {
-            return ListView(
-              children: [
-                Text(data.name),
-                Text(data.username),
-                Text(data.email),
-                Text(data.phone),
-                Text(data.website),
-              ],
+            return RefreshIndicator(
+              onRefresh: () => ref.refresh(userDetailProvider(id).future),
+              child: ListView(
+                physics: AlwaysScrollableScrollPhysics(),
+                children: [
+                  Text(data.name),
+                  Text(data.username),
+                  Text(data.email),
+                  Text(data.phone),
+                  Text(data.website),
+                ],
+              ),
             );
           },
           error: (error, stackTrace) {
