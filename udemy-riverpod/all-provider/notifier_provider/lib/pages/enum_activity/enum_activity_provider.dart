@@ -1,3 +1,4 @@
+import 'package:dio/dio.dart';
 import 'package:notifier_provider/pages/enum_activity/enum_activity_state.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 

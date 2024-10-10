@@ -20,35 +20,43 @@ class _EnumActivityPageState extends ConsumerState<EnumActivityPage> {
   @override
   void initState() {
     super.initState();
-    ref.read(enumActivityProvider.notifier).fetchActivity(activityTypes[0]);
+    Future.delayed(
+      Duration.zero,
+      () {
+        ref.read(enumActivityProvider.notifier).fetchActivity(activityTypes[0]);
+      },
+    );
   }
 
   @override
   Widget build(BuildContext context) {
     final activityState = ref.watch(enumActivityProvider);
+    print(activityState.error);
 
     return Scaffold(
       appBar: AppBar(
         title: const Text('Enum Activity Page'),
       ),
-      body: switch (activityState.status) {
-        ActivityStatus.initial => const Text('Get some activity'),
-        ActivityStatus.loading => const CircularProgressIndicator(),
-        ActivityStatus.failure =>
-          activityState.activities.first == Activity.empty()
-              ? Text(activityState.error)
-              : ActivityWidget(activity: activityState.activities.first),
-        ActivityStatus.success =>
-          ActivityWidget(activity: activityState.activities.first),
-      },
-      floatingActionButton: FloatingActionButton(
+      body: Center(
+        child: switch (activityState.status) {
+          ActivityStatus.initial => const Text('Get some activity'),
+          ActivityStatus.loading => const CircularProgressIndicator(),
+          ActivityStatus.failure =>
+            activityState.activities.first == Activity.empty()
+                ? Text(activityState.error)
+                : ActivityWidget(activity: activityState.activities.first),
+          ActivityStatus.success =>
+            ActivityWidget(activity: activityState.activities.first),
+        },
+      ),
+      floatingActionButton: FloatingActionButton.extended(
         onPressed: () {
           final randomNumber = Random().nextInt(activityTypes.length);
           ref.read(enumActivityProvider.notifier).fetchActivity(
                 activityTypes[randomNumber],
               );
         },
-        child: const Text('New Activity'),
+        label: const Text('New Activity'),
       ),
     );
   }
