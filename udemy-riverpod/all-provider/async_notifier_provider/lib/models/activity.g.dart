@@ -11,7 +11,7 @@ _$ActivityImpl _$$ActivityImplFromJson(Map<String, dynamic> json) =>
       activity: json['activity'] as String,
       accessibility: (json['accessibility'] as num).toDouble(),
       type: json['type'] as String,
-      participants: json['participants'] as int,
+      participants: (json['participants'] as num).toInt(),
       price: (json['price'] as num).toDouble(),
       key: json['key'] as String,
     );
