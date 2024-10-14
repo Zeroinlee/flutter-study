@@ -21,10 +21,14 @@ Activity _$ActivityFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Activity {
   String get activity => throw _privateConstructorUsedError;
-  double get accessibility => throw _privateConstructorUsedError;
+  double get availability => throw _privateConstructorUsedError;
   String get type => throw _privateConstructorUsedError;
   int get participants => throw _privateConstructorUsedError;
   double get price => throw _privateConstructorUsedError;
+  String get accessibility => throw _privateConstructorUsedError;
+  String get duration => throw _privateConstructorUsedError;
+  bool get kidFriendly => throw _privateConstructorUsedError;
+  String get link => throw _privateConstructorUsedError;
   String get key => throw _privateConstructorUsedError;
 
   /// Serializes this Activity to a JSON map.
@@ -44,10 +48,14 @@ abstract class $ActivityCopyWith<$Res> {
   @useResult
   $Res call(
       {String activity,
-      double accessibility,
+      double availability,
       String type,
       int participants,
       double price,
+      String accessibility,
+      String duration,
+      bool kidFriendly,
+      String link,
       String key});
 }
 
@@ -67,10 +75,14 @@ class _$ActivityCopyWithImpl<$Res, $Val extends Activity>
   @override
   $Res call({
     Object? activity = null,
-    Object? accessibility = null,
+    Object? availability = null,
     Object? type = null,
     Object? participants = null,
     Object? price = null,
+    Object? accessibility = null,
+    Object? duration = null,
+    Object? kidFriendly = null,
+    Object? link = null,
     Object? key = null,
   }) {
     return _then(_value.copyWith(
@@ -78,9 +90,9 @@ class _$ActivityCopyWithImpl<$Res, $Val extends Activity>
           ? _value.activity
           : activity // ignore: cast_nullable_to_non_nullable
               as String,
-      accessibility: null == accessibility
-          ? _value.accessibility
-          : accessibility // ignore: cast_nullable_to_non_nullable
+      availability: null == availability
+          ? _value.availability
+          : availability // ignore: cast_nullable_to_non_nullable
               as double,
       type: null == type
           ? _value.type
@@ -94,6 +106,22 @@ class _$ActivityCopyWithImpl<$Res, $Val extends Activity>
           ? _value.price
           : price // ignore: cast_nullable_to_non_nullable
               as double,
+      accessibility: null == accessibility
+          ? _value.accessibility
+          : accessibility // ignore: cast_nullable_to_non_nullable
+              as String,
+      duration: null == duration
+          ? _value.duration
+          : duration // ignore: cast_nullable_to_non_nullable
+              as String,
+      kidFriendly: null == kidFriendly
+          ? _value.kidFriendly
+          : kidFriendly // ignore: cast_nullable_to_non_nullable
+              as bool,
+      link: null == link
+          ? _value.link
+          : link // ignore: cast_nullable_to_non_nullable
+              as String,
       key: null == key
           ? _value.key
           : key // ignore: cast_nullable_to_non_nullable
@@ -112,10 +140,14 @@ abstract class _$$ActivityImplCopyWith<$Res>
   @useResult
   $Res call(
       {String activity,
-      double accessibility,
+      double availability,
       String type,
       int participants,
       double price,
+      String accessibility,
+      String duration,
+      bool kidFriendly,
+      String link,
       String key});
 }
 
@@ -133,10 +165,14 @@ class __$$ActivityImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? activity = null,
-    Object? accessibility = null,
+    Object? availability = null,
     Object? type = null,
     Object? participants = null,
     Object? price = null,
+    Object? accessibility = null,
+    Object? duration = null,
+    Object? kidFriendly = null,
+    Object? link = null,
     Object? key = null,
   }) {
     return _then(_$ActivityImpl(
@@ -144,9 +180,9 @@ class __$$ActivityImplCopyWithImpl<$Res>
           ? _value.activity
           : activity // ignore: cast_nullable_to_non_nullable
               as String,
-      accessibility: null == accessibility
-          ? _value.accessibility
-          : accessibility // ignore: cast_nullable_to_non_nullable
+      availability: null == availability
+          ? _value.availability
+          : availability // ignore: cast_nullable_to_non_nullable
               as double,
       type: null == type
           ? _value.type
@@ -160,6 +196,22 @@ class __$$ActivityImplCopyWithImpl<$Res>
           ? _value.price
           : price // ignore: cast_nullable_to_non_nullable
               as double,
+      accessibility: null == accessibility
+          ? _value.accessibility
+          : accessibility // ignore: cast_nullable_to_non_nullable
+              as String,
+      duration: null == duration
+          ? _value.duration
+          : duration // ignore: cast_nullable_to_non_nullable
+              as String,
+      kidFriendly: null == kidFriendly
+          ? _value.kidFriendly
+          : kidFriendly // ignore: cast_nullable_to_non_nullable
+              as bool,
+      link: null == link
+          ? _value.link
+          : link // ignore: cast_nullable_to_non_nullable
+              as String,
       key: null == key
           ? _value.key
           : key // ignore: cast_nullable_to_non_nullable
@@ -173,10 +225,14 @@ class __$$ActivityImplCopyWithImpl<$Res>
 class _$ActivityImpl with DiagnosticableTreeMixin implements _Activity {
   const _$ActivityImpl(
       {required this.activity,
-      required this.accessibility,
+      required this.availability,
       required this.type,
       required this.participants,
       required this.price,
+      required this.accessibility,
+      required this.duration,
+      required this.kidFriendly,
+      required this.link,
       required this.key});
 
   factory _$ActivityImpl.fromJson(Map<String, dynamic> json) =>
@@ -185,7 +241,7 @@ class _$ActivityImpl with DiagnosticableTreeMixin implements _Activity {
   @override
   final String activity;
   @override
-  final double accessibility;
+  final double availability;
   @override
   final String type;
   @override
@@ -193,11 +249,19 @@ class _$ActivityImpl with DiagnosticableTreeMixin implements _Activity {
   @override
   final double price;
   @override
+  final String accessibility;
+  @override
+  final String duration;
+  @override
+  final bool kidFriendly;
+  @override
+  final String link;
+  @override
   final String key;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Activity(activity: $activity, accessibility: $accessibility, type: $type, participants: $participants, price: $price, key: $key)';
+    return 'Activity(activity: $activity, availability: $availability, type: $type, participants: $participants, price: $price, accessibility: $accessibility, duration: $duration, kidFriendly: $kidFriendly, link: $link, key: $key)';
   }
 
   @override
@@ -206,10 +270,14 @@ class _$ActivityImpl with DiagnosticableTreeMixin implements _Activity {
     properties
       ..add(DiagnosticsProperty('type', 'Activity'))
       ..add(DiagnosticsProperty('activity', activity))
-      ..add(DiagnosticsProperty('accessibility', accessibility))
+      ..add(DiagnosticsProperty('availability', availability))
       ..add(DiagnosticsProperty('type', type))
       ..add(DiagnosticsProperty('participants', participants))
       ..add(DiagnosticsProperty('price', price))
+      ..add(DiagnosticsProperty('accessibility', accessibility))
+      ..add(DiagnosticsProperty('duration', duration))
+      ..add(DiagnosticsProperty('kidFriendly', kidFriendly))
+      ..add(DiagnosticsProperty('link', link))
       ..add(DiagnosticsProperty('key', key));
   }
 
@@ -220,19 +288,26 @@ class _$ActivityImpl with DiagnosticableTreeMixin implements _Activity {
             other is _$ActivityImpl &&
             (identical(other.activity, activity) ||
                 other.activity == activity) &&
-            (identical(other.accessibility, accessibility) ||
-                other.accessibility == accessibility) &&
+            (identical(other.availability, availability) ||
+                other.availability == availability) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.participants, participants) ||
                 other.participants == participants) &&
             (identical(other.price, price) || other.price == price) &&
+            (identical(other.accessibility, accessibility) ||
+                other.accessibility == accessibility) &&
+            (identical(other.duration, duration) ||
+                other.duration == duration) &&
+            (identical(other.kidFriendly, kidFriendly) ||
+                other.kidFriendly == kidFriendly) &&
+            (identical(other.link, link) || other.link == link) &&
             (identical(other.key, key) || other.key == key));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, activity, accessibility, type, participants, price, key);
+  int get hashCode => Object.hash(runtimeType, activity, availability, type,
+      participants, price, accessibility, duration, kidFriendly, link, key);
 
   /// Create a copy of Activity
   /// with the given fields replaced by the non-null parameter values.
@@ -253,10 +328,14 @@ class _$ActivityImpl with DiagnosticableTreeMixin implements _Activity {
 abstract class _Activity implements Activity {
   const factory _Activity(
       {required final String activity,
-      required final double accessibility,
+      required final double availability,
       required final String type,
       required final int participants,
       required final double price,
+      required final String accessibility,
+      required final String duration,
+      required final bool kidFriendly,
+      required final String link,
       required final String key}) = _$ActivityImpl;
 
   factory _Activity.fromJson(Map<String, dynamic> json) =
@@ -265,13 +344,21 @@ abstract class _Activity implements Activity {
   @override
   String get activity;
   @override
-  double get accessibility;
+  double get availability;
   @override
   String get type;
   @override
   int get participants;
   @override
   double get price;
+  @override
+  String get accessibility;
+  @override
+  String get duration;
+  @override
+  bool get kidFriendly;
+  @override
+  String get link;
   @override
   String get key;
 
