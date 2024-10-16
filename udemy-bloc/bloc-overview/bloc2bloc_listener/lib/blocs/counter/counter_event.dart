@@ -7,4 +7,13 @@ sealed class CounterEvent extends Equatable {
   List<Object> get props => [];
 }
 
-final class ChangeCounterEvent extends CounterEvent {}
+class ChangeCounterEvent extends CounterEvent {
+  final int incrementSize;
+
+  const ChangeCounterEvent({
+    required this.incrementSize,
+  });
+
+  @override
+  List<Object> get props => [incrementSize];
+}
