@@ -1,9 +1,11 @@
 import 'package:bloc2bloc/blocs/color/color_bloc.dart';
 import 'package:bloc2bloc/blocs/counter/counter_bloc.dart';
+import 'package:bloc2bloc/observer/app_bloc_observer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() {
+  Bloc.observer = AppBlocObserver();
   runApp(const MyApp());
 }
 
