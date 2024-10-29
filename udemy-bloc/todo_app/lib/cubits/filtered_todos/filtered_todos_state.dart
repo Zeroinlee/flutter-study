@@ -2,12 +2,12 @@ part of 'filtered_todos_cubit.dart';
 
 class FilteredTodosState extends Equatable {
   final List<Todo> filteredTodos;
-  FilteredTodosState({
+  const FilteredTodosState({
     required this.filteredTodos,
   });
-  
-  factory FilteredTodosState.initial(){
-    return FilteredTodosState(filteredTodos: []);
+
+  factory FilteredTodosState.initial() {
+    return const FilteredTodosState(filteredTodos: []);
   }
 
   @override
