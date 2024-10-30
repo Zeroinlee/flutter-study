@@ -16,38 +16,41 @@ class FilteredTodosCubit extends Cubit<FilteredTodosState> {
   late StreamSubscription todoSearchSubscription;
   late StreamSubscription todoListSubscription;
 
+  final List<Todo> initialTodos;
+
   final TodoFilterCubit todoFilterCubit;
   final TodoSearchCubit todoSearchCubit;
   final TodoListCubit todoListCubit;
   FilteredTodosCubit({
+    required this.initialTodos,
     required this.todoFilterCubit,
     required this.todoSearchCubit,
     required this.todoListCubit,
-  }) : super(FilteredTodosState.initial()) {
+  }) : super(FilteredTodosState(filteredTodos: initialTodos)) {
     todoFilterSubscription = todoFilterCubit.stream.listen((event) {
       setFilteredTodos();
     });
-    todoSearchSubscription = todoFilterCubit.stream.listen((event) {
+    todoSearchSubscription = todoSearchCubit.stream.listen((event) {
       setFilteredTodos();
     });
-    todoListSubscription = todoFilterCubit.stream.listen((event) {
+    todoListSubscription = todoListCubit.stream.listen((event) {
       setFilteredTodos();
     });
   }
 
   void setFilteredTodos() {
-    List<Todo> _filteredTodos;
+    List<Todo> filteredTodos;
 
     switch (todoFilterCubit.state.filter) {
       case Filter.active:
-        _filteredTodos = todoListCubit.state.todos
+        filteredTodos = todoListCubit.state.todos
             .where(
               (todo) => !todo.completed,
             )
             .toList();
         break;
       case Filter.completed:
-        _filteredTodos = todoListCubit.state.todos
+        filteredTodos = todoListCubit.state.todos
             .where(
               (todo) => todo.completed,
             )
@@ -55,12 +58,12 @@ class FilteredTodosCubit extends Cubit<FilteredTodosState> {
         break;
       case Filter.all:
       default:
-        _filteredTodos = todoListCubit.state.todos;
+        filteredTodos = todoListCubit.state.todos;
         break;
     }
 
     if (todoSearchCubit.state.searchTerm.isNotEmpty) {
-      _filteredTodos = _filteredTodos
+      filteredTodos = filteredTodos
           .where(
             (todo) => todo.desc
                 .toLowerCase()
@@ -69,7 +72,7 @@ class FilteredTodosCubit extends Cubit<FilteredTodosState> {
           .toList();
     }
 
-    emit(state.copyWith(filteredTodos: _filteredTodos));
+    emit(state.copyWith(filteredTodos: filteredTodos));
   }
 
   @override
